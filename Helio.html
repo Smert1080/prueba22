@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba22</title>
+</head>
+<style>
+
+    model-viewer {
+        width: 350px;
+        height: 300px;
+    }
+</style> 
+
+<body>
+
+
+
+    <model-viewer src="Helio.glb" 
+                  ar ar-modes="scene-viewer webxr quick-look" 
+                  camera-controls 
+                  environment-image="neutral" 
+                  poster="poster.webp" 
+                  shadow-intensity="1" 
+                  auto-rotate
+                  border-box= 200%
+                  field-of-view= 60deg
+                  >
+
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">
+            Activa realidad aumentada
+        </button>
+        <div id="ar-prompt">
+        </div>
+    </model-viewer>
+    
+    <script 
+    type="module" 
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    
+</body>
+
+    </html>
